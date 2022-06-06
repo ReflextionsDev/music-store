@@ -29,9 +29,9 @@ const CustomThemeProvider = (props) => {
   const { children } = props;
 
   return (
-  <ThemeProvider theme={THEME}>
-    {children}
-  </ThemeProvider>
+    <ThemeProvider theme={THEME}>
+      {children}
+    </ThemeProvider>
   )
 }
 

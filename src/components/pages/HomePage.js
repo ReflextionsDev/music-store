@@ -11,12 +11,12 @@ const HomePage = () => {
 
   // This is what runs after the first render:
   useEffect(() => {
-      fetchProductData()
+    fetchProductData()
       .then(data => setProductData(data))
       .catch(error => console.log('error: ', error))
-    },
+  },
     []
-    )
+  )
 
   return (
     <Layout>

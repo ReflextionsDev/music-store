@@ -20,37 +20,35 @@ const ProductDisplay = (props) => {
     brand,
     price,
     image,
-  }} = props;
-
-
+  } } = props;
 
   return (
     <Card>
-    <CardHeader
-      title={title}
-      subheader={brand}
-      action={<Typography fontWeight="bold">${price / 100}</Typography>}
-    />
-    <CardMedia
-      component="img"
-      height="260"
-      image={image}
-      alt="Paella dish"
-    />
-    <CardContent>
-      <Typography variant="body2" color="text.secondary">
-        {description}
-      </Typography>
-    </CardContent>
-    <CardActions disableSpacing>
-      <Box display="flex" justifyContent="space-between" width="100%">
-        <Button variant="outlined" startIcon={<AddIcon />}>Add to cart</Button>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
-      </Box>
-    </CardActions>
-  </Card>
+      <CardHeader
+        title={title}
+        subheader={brand}
+        action={<Typography fontWeight="bold">${price / 100}</Typography>}
+      />
+      <CardMedia
+        component="img"
+        height="260"
+        image={image}
+        alt="Paella dish"
+      />
+      <CardContent>
+        <Typography variant="body2" color="text.secondary">
+          {description}
+        </Typography>
+      </CardContent>
+      <CardActions disableSpacing>
+        <Box display="flex" justifyContent="space-between" width="100%">
+          <Button variant="outlined" startIcon={<AddIcon />}>Add to cart</Button>
+          <IconButton aria-label="add to favorites">
+            <FavoriteIcon />
+          </IconButton>
+        </Box>
+      </CardActions>
+    </Card>
   )
 };
 
