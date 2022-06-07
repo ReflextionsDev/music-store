@@ -5,11 +5,9 @@ import Layout from '../Layout';
 import ProductDisplay from '../ProductDisplay';
 
 
-const HomePage = () => {
+const HomePage = (props) => {
   const [productData, setProductData] = useState([]);
 
-
-  // This is what runs after the first render:
   useEffect(() => {
     fetchProductData()
       .then(data => setProductData(data))

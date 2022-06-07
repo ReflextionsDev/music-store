@@ -21,6 +21,6 @@ export const fetchProductData = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(productList)
-    } ,1);
+    }, 1);
   })
 };

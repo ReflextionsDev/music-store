@@ -9,18 +9,23 @@ import CardMedia from '@mui/material/CardMedia';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import { Box } from '@mui/system';
-import * as React from 'react';
-
+import { useContext } from 'react';
+import { shoppingCartContext } from '../App';
 
 const ProductDisplay = (props) => {
-  const { product: {
-    id,
+  const { addToCart } = useContext(shoppingCartContext);
+
+  const {
+    product,
+  } = props;
+
+  const {
     title,
     description,
     brand,
     price,
-    image,
-  } } = props;
+    image } = product;
+
 
   return (
     <Card>
@@ -42,7 +47,7 @@ const ProductDisplay = (props) => {
       </CardContent>
       <CardActions disableSpacing>
         <Box display="flex" justifyContent="space-between" width="100%">
-          <Button variant="outlined" startIcon={<AddIcon />}>Add to cart</Button>
+          <Button variant="outlined" startIcon={<AddIcon />} onClick={() => addToCart(product)}>Add to cart</Button>
           <IconButton aria-label="add to favorites">
             <FavoriteIcon />
           </IconButton>
