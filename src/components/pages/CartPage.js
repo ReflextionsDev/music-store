@@ -1,9 +1,9 @@
 import { Box } from '@mui/material';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { shoppingCartContext } from '../../App';
 import Layout from '../Layout';
 
-const CartPage = (props) => {
+const CartPage = () => {
 
     const {
         shoppingCart,
@@ -14,7 +14,7 @@ const CartPage = (props) => {
         <Layout shoppingCart={shoppingCart}>
             <Box width={1} display="flex" flexDirection="column" alignItems="center" >
                 {shoppingCart.map(cartItem =>
-                    <Box p={3}>
+                    <Box p={3} key="cartItems">
                         <Box>
                             {cartItem.title} - Qty: {cartItem.quantity} - ${cartItem.price / 100} total$: {cartItem.total / 100}
                         </Box>

@@ -1,11 +1,11 @@
 import { Box } from '@mui/material';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { fetchProductData } from '../../dataFetching';
 import Layout from '../Layout';
 import ProductDisplay from '../ProductDisplay';
 
 
-const HomePage = (props) => {
+const HomePage = () => {
   const [productData, setProductData] = useState([]);
 
   useEffect(() => {

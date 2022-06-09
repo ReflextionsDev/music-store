@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react';
+import React, { createContext, useState } from 'react';
 import CustomThemeProvider from './components/CustomThemeProvider';
 import CartPage from './components/pages/CartPage';
 import HomePage from './components/pages/HomePage';

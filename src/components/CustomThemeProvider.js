@@ -1,4 +1,5 @@
 import { createTheme, ThemeProvider } from "@mui/material";
+import React from "react";
 
 const PURPLE = '#6750A4';
 const BLACK = '#1C1B1F';
